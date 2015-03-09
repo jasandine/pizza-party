@@ -10,7 +10,45 @@
   <title>Pizza Party</title>
 </head>
 <body>
+  <div class="container">
+    <h1>Calculate Pizza</h1>
+
+    <div class="row">
+      <div class="col-md-6">
+        <form id="enter-pizza">
+          <div class="form-group">
+            <label for="sizer">Size</label>
+            <select id="sizer">
+              <option value="">Select a size</option>
+              <option value="10">Small</option>
+              <option value="16">Medium</option>
+              <option value="24">Large</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="topper">Toppings</label>
+            <select id="topper">
+              <option value="">Select a topping</option>
+              <option value="cheese">Cheese</option>
+              <option value="pepperoni">Pepperoni</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn">Calculate!</button>
+        </form>
+      </div>
+    </div>
+     <div id="new-slices-toppings">
+      <h4>Your slice count:</h4>
+      <p><span id="slices"></span></p>
+     </div>
+          <div id="new-toppings">
+      <h4>Your topping:</h4>
+      <p><span id="toppings"></span></p>
+
+    </div>
 
 
-</body>
-</html>
+  </body>
+  </html>

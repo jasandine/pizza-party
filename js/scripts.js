@@ -1,20 +1,43 @@
 var PizzaCalc = {
-  pizzaSize: 0,
-  toppings: 0,
-  sliceCount: function(sliceCheck) {
-    if (sliceCheck === 4) {
-      this.pizzaSize += 10;
-    } else if (sliceCheck === 8) {
-      this.pizzaSize += 16;
-    } else if (sliceCheck === 12) {
-      this.pizzaSize += 24;
+  slices: 0,
+  size: 0,
+  toppings: "",
+  
+  sizer: function(size) {
+    if (size === 10) {
+      this.slices += 4;
+    } else if (size === 16) {
+      this.slices += 12;
+    } else if (size === 24) { 
+      this.slices += 16;
     }
   },
-  toppingCount: function(toppingCheck) {
-    if (toppingCheck === 0) {
+  topper: function(topIt) {
+    if (topIt === "cheese") {
       this.toppings = "cheese";
-    } else if (toppingCheck === 1) {
+    } else if (topIt === "pepperoni") {
       this.toppings = "pepperoni";
     }
-  }
+  } 
 };
+
+$(function() {
+  $("form#enter-pizza").submit(function(event) {
+    event.preventDefault();
+
+    var sizer = parseInt($("#sizer").val());
+    var topper = $("#topper").val();
+
+
+    var newPizza = Object.create(PizzaCalc);
+    newPizza.sizer(sizer);
+    newPizza.topper(topper);
+
+    $("#new-pizza").show();
+    $("#slices").text(newPizza.slices);
+    $("#toppings").text(newPizza.toppings);
+
+
+  });
+
+});
