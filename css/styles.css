@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+  font-family: 'Cutive Mono' ;
+}
+
+body {
+font-family: 'Cutive Mono' ;
+}
+
+form {
+
+  padding : 5px;
+  height: 157px;
+  width: 375px;
+  text-align: center;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#new-balance {
+  height: 75px;
+  width: 375px;
+  border : 1px solid #0088cc;
+  border-radius: 25px;
+  margin-top: 10px;
+  text-align: center;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
