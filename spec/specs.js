@@ -8,4 +8,12 @@ describe("PizzaCalc", function() {
     });
   });
 
+  describe("toppingCount", function() {
+    it("will calculate whether the pizza is cheese of pepperoni", function() {
+      var testPizzaCalc = Object.create(PizzaCalc);
+      testPizzaCalc.toppingCount(0);
+      expect(testPizzaCalc.toppings).to.equal("cheese");
+    });
+  });
+
 });
