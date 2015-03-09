@@ -4,6 +4,10 @@ var PizzaCalc = {
   sliceCount: function(sliceCheck) {
     if (sliceCheck === 4) {
       this.pizzaSize += 10;
+    } else if (sliceCheck === 8) {
+      this.pizzaSize += 16;
+    } else if (sliceCheck === 12) {
+      this.pizzaSize += 24;
     }
   },
   toppingCount: function(toppingCheck) {
